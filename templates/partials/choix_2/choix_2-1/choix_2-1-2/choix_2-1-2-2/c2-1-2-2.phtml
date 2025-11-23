@@ -1,0 +1,25 @@
+<main>
+    <?php
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0';;
+        $sub2_1_2_2_init = 0;   
+
+        if (strpos($choice, '2-1-2-2-1') === 0) 
+        {
+            $sub2_1_2_2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-2/choix_2-1-2-2-1/c2-1-2-2-1.phtml";
+        } 
+        else if (strpos($choice, '2-1-2-2-2') === 0) 
+        {
+            $sub2_1_2_2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-2/choix_2-1-2-2-2/prefin.phtml";
+        }
+
+        if ($sub2_1_2_2_init === 0) 
+        {
+            echo '<p>Vous trouvez un ticket de métro qui vous mène à un arrêt en plein milieu de la ville.</p>';
+            echo '<p>Vous décidez de vous y rendre, là bas vous remarquez que vous êtes suivis.</p>';
+            echo '<a href="index.php?choice=2-1-2-2-1">Courir<br></a>';
+            echo '<a href="index.php?choice=2-1-2-2-2">Faire comme si de rien était</a>';
+        }
+    ?>
+</main>

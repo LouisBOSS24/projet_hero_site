@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+}
+
+main p {
+    font-family: "Doto", sans-serif;
+}
+
+.main {
+    background-image: url(img/matrix.gif);
+}

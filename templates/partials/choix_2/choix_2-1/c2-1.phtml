@@ -1,0 +1,24 @@
+<main>
+    <?php
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0';
+        $sub2_1_init = 0; 
+
+        if (strpos($choice, '2-1-1') === 0)  
+        {
+            $sub2_1_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-1/c2-1-1.phtml";
+        } 
+        else if (strpos($choice, '2-1-2') === 0)
+        {
+            $sub2_1_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/c2-1-2.phtml";
+        }
+
+        if ($sub2_1_init === 0) 
+        {
+            echo '<p>Vous arrivez dans le secteur ou habite Neo. Mais vous ne connaissez pas son adresse exacte</p>';
+            echo '<a href="index.php?choice=2-1-1">Regarder toute les portes <br></a>';
+            echo '<a href="index.php?choice=2-1-2">Sonner à toutes les portes</a>';
+        }
+    ?>
+</main>

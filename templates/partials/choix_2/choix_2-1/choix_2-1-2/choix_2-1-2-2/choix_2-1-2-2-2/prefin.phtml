@@ -1,0 +1,20 @@
+<main>
+    <?php
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0';;
+        $sub_fin_init = 0;   
+
+        if (strpos($choice, '2-1-2-2-2-7') === 0) 
+        {
+            $sub_fin_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-2/choix_2-1-2-2-2/fin.phtml";
+        }
+
+        if ($sub_fin_init === 0) 
+        {
+            echo '<p>Blackout ! Vous vous réveillez sur une chaise assis devant un homme vêtu de cuir noir. Il vous dit qu’il sait pourquoi vous cherchez Neo.</p>';
+            echo '<p>Vous avez auparavant discuté avec Neo sur des événements qui vous paraissaient pas normal comme si nos étions dans une fausse réalité.</p>';
+            echo '<p>Neo à parlé de vous à cet homme vêtu de cuir qui a l’air d’être le chef de leur Organisation</p>';
+            echo '<a href="index.php?choice=2-1-2-2-2-7">Suite</a>';
+        }
+    ?>
+</main>

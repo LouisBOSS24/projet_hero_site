@@ -1,0 +1,24 @@
+<div class=choix2>
+    <?php
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0'; // Modified by GitHub Copilot. Prompt: "pourquoi quand je clique sur l'une des deux possibilités ça me renvoie vers la page c2 alors que dans la barre d"url ça m'affiche bien c2-1-1"
+        $sub2_init = 0;
+
+        if (strpos($choice, '2-1') === 0) //Strpos généré par GitHub Copilot meme propt que précédemment
+        {
+            $sub2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/c2-1.phtml";
+        } 
+        else if (strpos($choice, '2-2') === 0) 
+        {
+            $sub2_init = 1;
+            require "templates/partials/choix_2/choix_2-2/c2-2.phtml";
+        }
+
+        if ($sub2_init === 0) 
+        {
+            echo '<p> Vous avez trouvé un secteur dans lequel chercher en ville est c’est en plus dans votre ville.</p>';
+            echo '<a href="index.php?choice=2-1">Y aller en transports en communs <br></a>';
+            echo '<a href="index.php?choice=2-2">Y aller à Pied pour économiser de l’argent</a>';
+        }
+    ?>
+</div>

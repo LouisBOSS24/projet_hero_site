@@ -1,0 +1,37 @@
+<main class="main">
+    <?php
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1); /*Deux dernières lignes générées par IA (Chat GPT)*/
+
+        $init = 0;
+        
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0'; // Modified by GitHub Copilot. Prompt: "pourquoi quand je clique sur l'une des deux possibilités ça me renvoie vers la page c2 alors que dans la barre d"url ça m'affiche bien c2-1-1"
+        $top = explode('-', $choice)[0];
+
+        if ($top === '1') 
+        {
+            $init = 1;
+            require "templates/partials/choix_1/c1.phtml";
+        } 
+        else if ($top === '2') 
+        {
+            $init = 1;
+            require "templates/partials/choix_2/c2.phtml";
+        }
+        else if ($top === '3') 
+        {
+            $init = 1;
+            require "templates/partials/choix_3/c3.phtml";
+        }
+
+    
+        if ($init === 0) {
+            echo '<h3>Mise en situation</h3>';
+            echo '<p>Vous êtes Kryptex un jeune hacker des années 2000, Depuis quelques semaines de cela vous n’avez plus eu aucune nouvelle de votre ami en ligne : un certain Neo. Celui-ci a disparu du jour au lendemain.</p>';
+            echo '<p>Vous décidez d’enquêter sur sa disparition :</p>';
+            echo '<a href="index.php?choice=1">Hacker son ordinateur pour trouver des informations <br></a>';
+            echo '<a href="index.php?choice=2">Vérifier vos conversations avec lui <br></a>';
+            echo '<a href="index.php?choice=3">Vous dire qu’il est parti en vacances <br></a>';
+        }
+    ?>
+</main>

@@ -1,0 +1,26 @@
+<main>
+    <?php
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0';;
+        $sub2_1_2_init = 0;   
+
+        if (strpos($choice, '2-1-2-1') === 0) 
+        {
+            $sub2_1_2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-1/c2-1-2-1.phtml";
+        } 
+        else if (strpos($choice, '2-1-2-2') === 0) 
+        {
+            $sub2_1_2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-2/c2-1-2-2.phtml";
+        }
+
+        if ($sub2_1_2_init === 0) 
+        {
+            echo '<p>Vous sonnez à plusieurs portes sans résultats mais au bout d’un moment vous tombez sur quelqu’un qui connaît un certain Thomas Anderson, il se fait aussi appeler Neo sur certains jeux auquel il joue avec lui.</p>';
+            echo '<p>Ce dernier vous donne son adresse</p>';
+            echo '<p>Vous vous y rendez et commencez à enquêter</p>';
+            echo '<a href="index.php?choice=2-1-2-1">Chercher dans son ordinateur<br></a>';
+            echo '<a href="index.php?choice=2-1-2-2">Chercher dans ses tiroirs de bureau</a>';
+        }
+    ?>
+</main>

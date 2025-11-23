@@ -1,0 +1,26 @@
+<main>
+    <?php
+        $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0';;
+        $sub2_1_2_2_2_init = 0;   
+
+        if (strpos($choice, '2-1-2-2-2-7-4') === 0) 
+        {
+            $sub2_1_2_2_2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-2/choix_2-1-2-2-2/choix_bleu/finBleue.phtml";
+        } 
+        else if (strpos($choice, '2-1-2-2-2-7-5') === 0) 
+        {
+            $sub2_1_2_2_2_init = 1;
+            require "templates/partials/choix_2/choix_2-1/choix_2-1-2/choix_2-1-2-2/choix_2-1-2-2-2/choix_rouge/finRouge.phtml";
+        }
+
+        if ($sub2_1_2_2_2_init === 0) 
+        {
+            echo '<p>Blackout ! Vous vous réveillez sur une chaise assis devant un homme vêtu de cuir noir. Il vous dit qu’il sait pourquoi vous cherchez Neo.</p>';
+            echo '<p>Vous avez auparavant discuté avec Neo sur des événements qui vous paraissaient pas normal comme si nos étions dans une fausse réalité.</p>';
+            echo '<p>Neo à parlé de vous à cet homme vêtu de cuir qui a l’air d’être le chef de leur Organisation</p>';
+            echo '<a href="index.php?choice=2-1-2-2-2-7-4">Pilule Bleue<br></a>';
+            echo '<a href="index.php?choice=2-1-2-2-2-7-5">Pilule Rouge</a>';
+        }
+    ?>
+</main>

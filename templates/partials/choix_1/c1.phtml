@@ -1,0 +1,24 @@
+<main>
+    <?php
+        $choice = $_GET['choice'] ? (string) $_GET['choice'] : '0';;
+        $sub1_init = 0;   
+
+        if (strpos($choice, '1-1') === 0) 
+        {
+            $sub1_init = 1;
+            require "templates/partials/choix_1/choix_1-1/c1-1.phtml";
+        } 
+        else if (strpos($choice, '1-2') === 0) 
+        {
+            $sub1_init = 1;
+            require "templates/partials/choix_1/choix_1-2/c1-2.phtml";
+        }
+
+        if ($sub1_init === 0)
+        {
+            echo '<p>Très bien en essayant de le hacker vous tombez sur un fichier virus.exe et start.exe</p>';
+            echo '<a href="index.php?choice=1-1">virus.exe <br></a>';
+            echo '<a href="index.php?choice=1-2">start.exe</a>';
+        }
+    ?>
+</main>
