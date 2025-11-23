@@ -2,8 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Matrix Hero</title>
-        <link rel="stylesheet" href="projet_hero_site/assets/styles/style.css">
+        <title>Matrix Hero</title> 
+        <link rel="stylesheet" href="assets/styles/style.css?v=<?php echo filemtime('assets/styles/style.css'); ?>"> <!--GitHub Copilot  Prompt : "Pourquoi mon css ne se lie pas à mes phtml"-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
@@ -14,5 +14,5 @@
 </html>
 
 <?php
-    require "templates/partials/main.phtml";
+    require "templates/partials/main.phtml"; 
 ?>

@@ -1,4 +1,4 @@
-<main>
+<main class=pilule>
     <?php
         $choice = isset($_GET['choice']) ? (string) $_GET['choice'] : '0';;
         $sub2_1_2_2_2_init = 0;   
@@ -16,11 +16,11 @@
 
         if ($sub2_1_2_2_2_init === 0) 
         {
-            echo '<p>Blackout ! Vous vous réveillez sur une chaise assis devant un homme vêtu de cuir noir. Il vous dit qu’il sait pourquoi vous cherchez Neo.</p>';
-            echo '<p>Vous avez auparavant discuté avec Neo sur des événements qui vous paraissaient pas normal comme si nos étions dans une fausse réalité.</p>';
-            echo '<p>Neo à parlé de vous à cet homme vêtu de cuir qui a l’air d’être le chef de leur Organisation</p>';
-            echo '<a href="index.php?choice=2-1-2-2-2-7-4">Pilule Bleue<br></a>';
-            echo '<a href="index.php?choice=2-1-2-2-2-7-5">Pilule Rouge</a>';
+            echo '<p>Vous devez choisir entre la pilule Bleue ou la Pilule Rouge</p>';
+            echo "<p>Choisis la pilule bleue et tout s'arrête, après tu pourras faire de beaux rêves et penser ce que tu veux.</p>";
+            echo '<p>Choisis la pilule rouge : tu restes au Pays des Merveilles et on descend avec le lapin blanc au fond du gouffre </p>';
+            echo '<a href="index.php?choice=2-1-2-2-2-7-4" class=bleue>Pilule Bleue<br></a>';
+            echo '<a href="index.php?choice=2-1-2-2-2-7-5" class=rouge>Pilule Rouge</a>';
         }
     ?>
 </main>
